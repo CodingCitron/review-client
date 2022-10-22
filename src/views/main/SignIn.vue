@@ -3,9 +3,14 @@ import { ref } from 'vue'
 
 const username = ref('')
 const password = ref('')
+const message = ref('')
 
 function submitHandler(){
-    console.log('submit')
+    if(username.value.trim() === '' || password.value.trim() === '') {
+        return message.value = '아이디 또는 비밀번호를 입력하세요.'
+    }
+
+    // api 요청 
 }
 
 </script>
@@ -44,6 +49,9 @@ function submitHandler(){
             >
                 회원가입
             </router-link>
+        </div>
+        <div class="text-red-500">
+            {{ message }}
         </div>
     </form>
 </template>
