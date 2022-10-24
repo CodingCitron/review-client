@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-size: 14px;
+}
+
+.custom-layout {
+    @apply flex flex-col justify-between min-h-screen h-full;
+}
+
+.input {
+    @apply w-full px-3 py-2 border rounded-sm
+}
+
+.button {
+    @apply block w-full bg-orange-400 text-white p-2 text-center;
+}
